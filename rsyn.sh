@@ -1,7 +1,6 @@
 #!/bin/bash
 #Script to mount to network and automate backup using rsync.
 # Specify the mount point here.
-#Automount can be done by adding following lines of code into 
 sudo mount -t cifs -o user=klamichh,domain=nexus,sec=ntlmssp,file_mode=0777,dir_mode=0777 //ecresearch.uwaterloo.ca/klamichh ~kamal/ecresearch
 #Give the correct password (WATIAM user password)
 mount_point='/home/kamal/ecresearch'
