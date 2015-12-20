@@ -1,0 +1,13 @@
+sudo mount -t cifs -o user=klamichh,domain=nexus,sec=ntlmssp,file_mode=0777,dir_mode=0777 //ecresearch.uwaterloo.ca/klamichh ~kamal/ecresearch
+
+
+sudo rsync --archive --hard-links \
+--verbose --human-readable --itemize-changes --progress \
+--delete --delete-excluded --exclude='/.Trash-1000/' \
+~kamal/work/ ~kamal/ecresearch/
+
+sudo rsync --archive --hard-links \ 
+--verbose --human-readable --itemize-changes --progress \
+--delete --delete-excluded --exclude='/.Trash-1000/' \
+ ~kamal/work/ ${backup_path}/ 2>&1 | tee ~kamal/work/rsync-output.txt
+

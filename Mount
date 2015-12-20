@@ -1,0 +1,1 @@
+sudo mount -t cifs -o user=uwusername,domain=nexus,sec=ntlmssp,file_mode=0777,dir_mode=0777 //ecresearch.uwaterloo.ca/UWusrname~mount point
